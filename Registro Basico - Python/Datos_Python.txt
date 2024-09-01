@@ -1,0 +1,6 @@
+Nombre : Eduardo
+Apellidos :Santiago Flores
+Edad:19
+Telefono:9611099833
+Estatura:1.70
+

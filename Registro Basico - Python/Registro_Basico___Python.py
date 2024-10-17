@@ -1,6 +1,27 @@
 import tkinter as tk 
 import re
 from tkinter import messagebox
+import mysql.connector as mysqlCon
+
+def insertRegistry(firstName, lastName, telephone, height, age, gender):
+    try:
+        connection = mysqlCon.connect(
+            host = "localhost",
+            port = "3306",
+            user = "root",
+            password = "",
+            database = "registro"
+        )
+        cursor = connection.cursor()
+        query = "insert into datos (firstName, lastName, telephone, height, age, gender) values (%s, %s, %s, %s, %s, %s)"
+        values = (firstName, lastName, telephone, height, age, gender)
+        cursor.execute(query, values)
+        connection.commit()
+        cursor.close()
+        connection.close()
+        messagebox.showinfo("Informacion", "Datos guardados en la base de datos")
+    except mysqlCon.error as err:
+        messagebox.showerror("Error", f"Eror al insertar los datos: {err}")
 
 def limpiar_campos(): 
     tbNombre.delete(0, tk.END)
@@ -43,6 +64,8 @@ def guardar_valores():
         genero = "Mujer" 
     
     if (Valid_Int(edad) and Valid_Float(estatura) and Validar_Telefono(telefono) and Valid_Text(nombres) and Valid_Text(apellidos)):
+        insertRegistry(nombres, apellidos, telefono, estatura, edad, genero)
+
         datos = (f"Nombre: {nombres}\nApellidos: {apellidos}\nEdad: {edad}\nTeléfono: {telefono}\nEstatura: {estatura}\nGénero: {genero}")
         with open("Datos_Python.txt", "a") as file: 
             file.write(datos + "\n\n")

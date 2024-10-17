@@ -4,3 +4,45 @@ Edad:19
 Telefono:9611099833
 Estatura:1.70
 
+Nombre: Eduardo Emmanuel
+Apellidos: Santiago Flores
+Edad: 19
+Teléfono: 9611099833
+Estatura: 1.70
+Género: Hombre
+
+Nombre: Eduardo
+Apellidos: Santiago
+Edad: 19
+Teléfono: 9163457890
+Estatura: 1.70
+Género: Hombre
+
+Nombre: Eduardo
+Apellidos: Santiago
+Edad: 19
+Teléfono: 9163457890
+Estatura: 1.70
+Género: Hombre
+
+Nombre: Juan Manuel
+Apellidos: Ley Camacho
+Edad: 19
+Teléfono: 9661171438
+Estatura: 1.70
+Género: Hombre
+
+Nombre: Juan Manuel
+Apellidos: Ley Camacho
+Edad: 19
+Teléfono: 9661771438
+Estatura: 1.75
+Género: Hombre
+
+Nombre: Juan Manuel
+Apellidos: Ley Camacho
+Edad: 19
+Teléfono: 9661171438
+Estatura: 1.75
+Género: Hombre
+
